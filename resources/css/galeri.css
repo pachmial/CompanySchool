@@ -1,0 +1,156 @@
+/* ============================= BANNER HALAMAN ============================= */
+
+.page-banner--center {
+    background-color: var(--color-primary);
+    padding: 56px 24px 48px;
+    text-align: center;
+}
+
+.page-banner--center .page-banner__title {
+    font-size: 42px;
+    color: var(--color-white);
+}
+
+.page-banner__subtitle {
+    max-width: 640px;
+    margin: 16px auto 0;
+    color: #d7ddea;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.breadcrumb--center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.breadcrumb--center .breadcrumb__link {
+    color: var(--color-white);
+    opacity: 0.85;
+}
+.breadcrumb--center .breadcrumb__link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.breadcrumb--center .breadcrumb__sep {
+    color: var(--color-white);
+    opacity: 0.6;
+}
+
+.breadcrumb--center .breadcrumb__current {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+/* ============================= LAYOUT ============================= */
+
+.galeri-section {
+    background-color: var(--color-bg-page);
+    padding: 48px 24px 72px;
+}
+
+.galeri-container {
+    max-width: var(--container-width);
+    margin-inline: auto;
+}
+
+/* ============================= FILTER KATEGORI ============================= */
+
+.gallery-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.gallery-filter__btn {
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    background-color: #eceff3;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.gallery-filter__btn:hover {
+    background-color: #e0e4ea;
+}
+
+.gallery-filter__btn--active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.gallery-filter__btn--active:hover {
+    background-color: var(--color-primary);
+}
+
+/* ============================= GRID GALERI (3 KOLOM) ============================= */
+
+.gallery-grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.gallery-tile {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.gallery-tile__image {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.gallery-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: 40px 20px;
+}
+
+/* ============================= PAGINATION ============================= */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--color-white);
+}
+.pagination__btn:hover {
+    border-color: var(--color-primary);
+}
+
+.pagination__btn--active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.pagination__btn--nav {
+    font-size: 16px;
+}

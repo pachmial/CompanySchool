@@ -1,0 +1,192 @@
+/* ============================= BANNER HALAMAN ============================= */
+
+.produk-banner {
+    background-color: var(--color-primary);
+    padding: 56px 24px 96px;
+    text-align: center;
+}
+
+.produk-banner .page-banner__title {
+    font-size: 42px;
+    color: var(--color-white);
+}
+
+.page-banner__subtitle {
+    max-width: 640px;
+    margin: 16px auto 0;
+    color: #d7ddea;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ============================= LAYOUT ============================= */
+
+.produk-section {
+    background-color: var(--color-bg-page);
+    padding: 0 24px 72px;
+}
+
+.produk-container {
+    max-width: var(--container-width);
+    margin-inline: auto;
+}
+
+/* ============================= SEARCH BAR (MENIMPA BANNER) ============================= */
+
+.produk-search {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: -56px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.produk-search__icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.produk-search__form {
+    flex: 1;
+}
+
+.produk-search__input {
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    color: var(--color-text);
+    font-family: inherit;
+}
+.produk-search__input:focus {
+    outline: none;
+}
+
+/* ============================= GRID PRODUK ============================= */
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.produk-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+.produk-card:hover {
+    border-color: var(--color-primary);
+}
+
+.produk-card__image-wrap {
+    background-color: var(--color-bg-page);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+}
+
+.produk-card__image {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+}
+
+.produk-card__body {
+    padding: 20px 22px 24px;
+}
+
+.produk-card__name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.produk-card__desc {
+    font-size: 13.5px;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+}
+
+.produk-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.produk-card__price {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-accent-dark);
+}
+
+.produk-card__cart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+}
+.produk-card__cart img {
+    width: 22px;
+    height: 22px;
+}
+
+.produk-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: 40px 20px;
+}
+
+/* ============================= PAGINATION ============================= */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--color-white);
+}
+.pagination__btn:hover {
+    border-color: var(--color-primary);
+}
+
+.pagination__btn--active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.pagination__btn--nav {
+    font-size: 16px;
+}
+
+.pagination__dots {
+    color: var(--color-text-muted);
+    padding: 0 4px;
+}

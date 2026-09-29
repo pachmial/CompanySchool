@@ -1,0 +1,119 @@
+.admin-body {
+    margin: 0;
+    background-color: var(--color-bg-page);
+}
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ============================= SIDEBAR ============================= */
+
+.admin-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #f4f6f9;
+    border-right: 1px solid var(--color-border);
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-sidebar__brand {
+    margin-bottom: 32px;
+    padding: 0 8px;
+}
+
+.admin-sidebar__brand-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: 0.3px;
+}
+
+.admin-sidebar__brand-subtitle {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-top: 2px;
+}
+
+.admin-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.admin-nav__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--color-text);
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+}
+.admin-nav__item:hover {
+    background-color: #e8ebf0;
+}
+
+.admin-nav__item--active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.admin-nav__item--active:hover {
+    background-color: var(--color-primary);
+}
+
+.admin-nav__icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.admin-nav__item--active .admin-nav__icon {
+    filter: brightness(0) invert(1);
+}
+
+.admin-nav__logout-form {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.admin-nav__item--logout {
+    color: #dc2626;
+}
+.admin-nav__item--logout:hover {
+    background-color: #fdecea;
+}
+
+/* ============================= KONTEN ============================= */
+
+.admin-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-topbar {
+    padding: 24px 40px;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-white);
+}
+
+.admin-topbar__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.admin-content {
+    padding: 40px;
+}

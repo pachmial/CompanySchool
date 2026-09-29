@@ -1,0 +1,228 @@
+/* ============================= BANNER HALAMAN ============================= */
+
+.page-banner {
+    background-color: var(--color-primary);
+    padding: 56px 24px 64px;
+}
+
+.page-banner__content {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    color: var(--color-white);
+}
+
+.page-banner__title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    color: var(--color-white);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.breadcrumb__link {
+    color: var(--color-white);
+    opacity: 0.85;
+}
+.breadcrumb__link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.breadcrumb__sep {
+    opacity: 0.6;
+}
+
+.breadcrumb__current {
+    font-weight: 700;
+}
+
+/* ============================= LAYOUT ============================= */
+
+.artikel-section {
+    background-color: var(--color-bg-page);
+    padding: 48px 24px 72px;
+}
+
+.artikel-layout {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* ============================= SIDEBAR ============================= */
+
+.search-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+}
+
+.search-card__title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.search-card__form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-card__input {
+    width: 100%;
+    padding: 12px 44px 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    color: var(--color-text);
+}
+.search-card__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.search-card__btn {
+    position: absolute;
+    right: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+}
+
+.search-card__icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* ============================= GRID ARTIKEL ============================= */
+
+.artikel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.artikel-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--color-white);
+    transition: border-color 0.2s ease;
+}
+.artikel-card:hover {
+    border-color: var(--color-primary);
+}
+
+.artikel-card__image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.artikel-card__body {
+    padding: 20px 22px 24px;
+}
+
+.artikel-card__date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.artikel-card__date-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.artikel-card__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0 10px;
+    color: var(--color-text);
+}
+
+.artikel-card__excerpt {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.artikel-card__divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 18px 0 14px;
+}
+
+.artikel-card__link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+.artikel-card__link:hover {
+    text-decoration: underline;
+}
+
+.artikel-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: 40px 20px;
+}
+
+/* ============================= PAGINATION ============================= */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 48px;
+}
+
+.pagination__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--color-white);
+}
+.pagination__btn:hover {
+    border-color: var(--color-primary);
+}
+
+.pagination__btn--active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.pagination__btn--nav {
+    font-size: 16px;
+}
+
+.pagination__dots {
+    color: var(--color-text-muted);
+    padding: 0 4px;
+}

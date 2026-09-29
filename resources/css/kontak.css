@@ -1,0 +1,305 @@
+/* ============================= BANNER HALAMAN ============================= */
+
+.page-banner {
+    background-color: var(--color-primary);
+    padding: 56px 24px 64px;
+}
+
+.page-banner__content {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    color: var(--color-white);
+}
+
+.page-banner__title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    color: var(--color-white);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.breadcrumb__link {
+    color: var(--color-white);
+    opacity: 0.85;
+}
+.breadcrumb__link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.breadcrumb__sep {
+    color: var(--color-white);
+    opacity: 0.6;
+}
+
+.breadcrumb__current {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+/* ============================= LAYOUT ============================= */
+
+.kontak-section {
+    background-color: var(--color-bg-page);
+    padding: 48px 24px 72px;
+}
+
+.kontak-container {
+    max-width: var(--container-width);
+    margin-inline: auto;
+}
+
+.kontak-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 32px;
+}
+
+.kontak-left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ============================= INFO SEKOLAH ============================= */
+
+.info-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+}
+
+.info-card__title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background-color: #e8edfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-item__icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.info-item__label {
+    display: block;
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.info-item__text {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+/* ============================= JAM OPERASIONAL ============================= */
+
+.jam-card {
+    background-color: #f0f2f6;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+}
+
+.jam-card__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 18px;
+}
+
+.jam-card__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.jam-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.jam-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 14.5px;
+}
+.jam-item:last-child {
+    border-bottom: none;
+}
+
+.jam-item__day {
+    color: var(--color-text);
+}
+
+.jam-item__time {
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.jam-item__time--closed {
+    color: #dc2626;
+}
+
+/* ============================= FORM KIRIM PESAN ============================= */
+
+.form-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+}
+
+.form-card__title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.form-card__subtitle {
+    font-size: 14.5px;
+    color: var(--color-text-muted);
+    margin-bottom: 28px;
+}
+
+.kontak-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.kontak-form__group {
+    margin-bottom: 20px;
+}
+
+.kontak-form__label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.kontak-form__input,
+.kontak-form__textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    color: var(--color-text);
+    font-family: inherit;
+}
+.kontak-form__input:focus,
+.kontak-form__textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.kontak-form__textarea {
+    resize: vertical;
+}
+
+.kontak-form__submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+.kontak-form__submit:hover {
+    opacity: 0.92;
+}
+
+.kontak-form__submit-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* ============================= PETA LOKASI ============================= */
+
+.kontak-map {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.kontak-map__frame {
+    width: 100%;
+    height: 420px;
+    border: none;
+    display: block;
+}
+
+.kontak-map__badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    max-width: 260px;
+}
+
+.kontak-map__badge-title {
+    display: block;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+}
+
+.kontak-map__badge-text {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
