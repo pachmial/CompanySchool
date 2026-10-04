@@ -154,3 +154,126 @@
 .pagination__btn--nav {
     font-size: 16px;
 }
+
+/* =====================================================================
+   RESPONSIVE - HALAMAN GALERI
+   Breakpoint: 1024px (tablet landscape), 768px (tablet), 640px, 480px (HP)
+   ===================================================================== */
+
+/* ---------- Tablet landscape ---------- */
+@media (max-width: 1024px) {
+
+    .gallery-grid-3col {
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+    .gallery-tile__image {
+        height: 220px;
+    }
+}
+
+/* ---------- Tablet portrait ---------- */
+@media (max-width: 768px) {
+
+    .page-banner--center {
+        padding: 40px 20px 36px;
+    }
+    .page-banner--center .page-banner__title {
+        font-size: 34px;
+    }
+    .page-banner__subtitle {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+    .breadcrumb--center {
+        margin-top: 16px;
+    }
+
+    .galeri-section {
+        padding: 36px 20px 56px;
+    }
+
+    .gallery-filter {
+        gap: 10px;
+        margin-bottom: 28px;
+    }
+    .gallery-tile__image {
+        height: 190px;
+    }
+}
+
+/* ---------- HP: 2 kolom, foto persegi ---------- */
+@media (max-width: 640px) {
+
+    .gallery-grid-3col {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+    .gallery-tile {
+        border-radius: var(--radius-md);
+    }
+    .gallery-tile__image {
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    /* Foto ganjil terakhir dibuat selebar grid supaya tidak menggantung sendirian */
+    .gallery-tile:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+    .gallery-tile:last-child:nth-child(odd) .gallery-tile__image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-banner--center {
+        padding: 32px 16px 30px;
+    }
+    .page-banner--center .page-banner__title {
+        font-size: 28px;
+    }
+    .page-banner__subtitle {
+        font-size: 14px;
+    }
+    .breadcrumb--center {
+        font-size: 13px;
+    }
+
+    .galeri-section {
+        padding: 28px 16px 44px;
+    }
+
+    /* Filter: grid 2x2 agar tombol rapi dan sama lebar */
+    .gallery-filter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 22px;
+    }
+    .gallery-filter__btn {
+        padding: 10px 12px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .gallery-grid-3col {
+        gap: 10px;
+    }
+
+    .pagination {
+        gap: 4px;
+    }
+    .pagination__btn {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+}

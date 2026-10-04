@@ -190,3 +190,184 @@
     color: var(--color-text-muted);
     padding: 0 4px;
 }
+
+/* =====================================================================
+   RESPONSIVE - HALAMAN PRODUK
+   Breakpoint: 1024px (tablet landscape), 900px (tablet), 768px, 480px (HP)
+   Catatan: 8 produk per halaman, jadi grid dibuat 4 kolom atau 2 kolom
+   (bukan 3) agar baris terakhir selalu penuh.
+   ===================================================================== */
+
+/* ---------- Tablet landscape: tetap 4 kolom, lebih rapat ---------- */
+@media (max-width: 1024px) {
+
+    .produk-grid {
+        gap: 16px;
+    }
+    .produk-card__image-wrap {
+        padding: 20px;
+    }
+    .produk-card__image {
+        height: 130px;
+    }
+    .produk-card__body {
+        padding: 16px 16px 20px;
+    }
+    .produk-card__name {
+        font-size: 16px;
+    }
+
+    /* Footer kartu (harga + link) selalu rata di bagian bawah */
+    .produk-card {
+        display: flex;
+        flex-direction: column;
+    }
+    .produk-card__body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .produk-card__footer {
+        margin-top: auto;
+        flex-wrap: wrap;
+        gap: 6px 10px;
+    }
+    .produk-card__price {
+        font-size: 17px;
+    }
+}
+
+/* ---------- Tablet portrait: 2 kolom ---------- */
+@media (max-width: 900px) {
+
+    .produk-banner {
+        padding: 44px 20px 84px;
+    }
+    .produk-banner .page-banner__title {
+        font-size: 36px;
+    }
+
+    .produk-section {
+        padding: 0 20px 56px;
+    }
+    .produk-search {
+        margin-top: -48px;
+        margin-bottom: 32px;
+    }
+
+    .produk-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-bottom: 40px;
+    }
+    .produk-card__image-wrap {
+        padding: 24px;
+    }
+    .produk-card__image {
+        height: 170px;
+    }
+    .produk-card__body {
+        padding: 18px 20px 22px;
+    }
+    .produk-card__name {
+        font-size: 17px;
+    }
+}
+
+/* ---------- Tablet portrait kecil & HP besar ---------- */
+@media (max-width: 768px) {
+
+    .produk-banner .page-banner__title {
+        font-size: 32px;
+    }
+    .page-banner__subtitle {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+}
+
+/* ---------- HP: 2 kolom ringkas ---------- */
+@media (max-width: 480px) {
+
+    .produk-banner {
+        padding: 34px 16px 68px;
+    }
+    .produk-banner .page-banner__title {
+        font-size: 27px;
+    }
+    .page-banner__subtitle {
+        font-size: 14px;
+    }
+
+    .produk-section {
+        padding: 0 16px 44px;
+    }
+    .produk-search {
+        padding: 13px 16px;
+        margin-top: -40px;
+        margin-bottom: 22px;
+        border-radius: var(--radius-md);
+    }
+    .produk-search__input {
+        font-size: 14px;
+    }
+
+    .produk-grid {
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+    .produk-card {
+        border-radius: var(--radius-md);
+    }
+    .produk-card__image-wrap {
+        padding: 14px;
+    }
+    .produk-card__image {
+        height: 110px;
+    }
+    .produk-card__body {
+        padding: 12px 12px 16px;
+    }
+    .produk-card__name {
+        font-size: 14.5px;
+        overflow-wrap: anywhere;
+    }
+    .produk-card__desc {
+        font-size: 12.5px;
+        margin-bottom: 12px;
+    }
+
+    /* Harga di atas, link beli di bawahnya */
+    .produk-card__footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .produk-card__price {
+        font-size: 15.5px;
+    }
+    .produk-card__footer a {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--color-primary);
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .pagination__btn {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+    .pagination__dots {
+        padding: 0;
+    }
+
+    .produk-card__footer a {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 14px;
+    }
+}

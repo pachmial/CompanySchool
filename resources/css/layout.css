@@ -284,3 +284,174 @@ ul {
     font-size: 15px;
     max-width: 720px;
 }
+
+/* =====================================================================
+   RESPONSIVE - NAVBAR, FOOTER, PAGE HEADER
+   Breakpoint: 1024px (tablet landscape ke bawah), 768px (tablet), 480px (HP)
+   ===================================================================== */
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Tombol hamburger: disembunyikan di desktop */
+.navbar__toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.navbar__toggle-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.navbar__toggle[aria-expanded="true"] .navbar__toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.navbar__toggle[aria-expanded="true"] .navbar__toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+.navbar__toggle[aria-expanded="true"] .navbar__toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- Tablet landscape & di bawahnya ---------- */
+@media (max-width: 1024px) {
+
+    .navbar__container {
+        flex-wrap: wrap;
+        padding: 12px 20px;
+        gap: 0 12px;
+    }
+
+    .navbar__brand  { order: 1; }
+    .navbar__toggle { order: 2; display: flex; }
+
+    /* Menu jadi panel dropdown penuh lebar */
+    .navbar__menu {
+        order: 3;
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding-top: 10px;
+    }
+    .navbar__menu.is-open {
+        display: flex;
+    }
+
+    .navbar__menu a {
+        padding: 13px 4px;
+        font-size: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .navbar__menu a.is-active {
+        border-bottom-color: rgba(255, 255, 255, 0.14);
+        color: var(--color-accent);
+        font-weight: 700;
+    }
+
+    .btn-login-admin {
+        order: 4;
+        display: none;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 14px 0 4px;
+        padding: 12px 20px;
+    }
+    .btn-login-admin.is-open {
+        display: block;
+    }
+
+    /* Footer: 2 kolom, kolom brand memanjang penuh */
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 28px;
+    }
+    .footer__col:first-child {
+        grid-column: 1 / -1;
+    }
+    .footer__desc {
+        max-width: 560px;
+    }
+}
+
+/* ---------- Tablet portrait ---------- */
+@media (max-width: 768px) {
+
+    .navbar__title {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding-top: 40px;
+    }
+    .footer__grid {
+        padding-inline: 20px;
+        padding-bottom: 28px;
+    }
+
+    .page-header {
+        padding: 36px 20px 48px;
+    }
+    .page-header__title {
+        font-size: 32px;
+    }
+}
+
+/* ---------- HP ---------- */
+@media (max-width: 480px) {
+
+    .navbar__container {
+        padding: 10px 16px;
+    }
+    .navbar__logo {
+        width: 34px;
+        height: 34px;
+    }
+    .navbar__title {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
+    /* Footer: 1 kolom */
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-inline: 16px;
+    }
+    .footer__list--info li,
+    .footer__list li {
+        overflow-wrap: anywhere;
+    }
+    .footer__bottom {
+        padding: 16px;
+        font-size: 12px;
+    }
+
+    .page-header {
+        padding: 28px 16px 40px;
+    }
+    .page-header__title {
+        font-size: 26px;
+    }
+    .page-header__breadcrumb {
+        font-size: 13px;
+        margin-bottom: 14px;
+    }
+}

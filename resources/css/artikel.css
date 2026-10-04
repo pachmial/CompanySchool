@@ -226,3 +226,139 @@
     color: var(--color-text-muted);
     padding: 0 4px;
 }
+
+/* =====================================================================
+   RESPONSIVE - HALAMAN ARTIKEL
+   Breakpoint: 1024px (tablet landscape), 900px (tablet), 768px, 640px, 480px (HP)
+   ===================================================================== */
+
+/* ---------- Tablet landscape: sidebar lebih ramping ---------- */
+@media (max-width: 1024px) {
+
+    .artikel-layout {
+        grid-template-columns: 240px 1fr;
+        gap: 24px;
+    }
+    .search-card {
+        padding: 20px;
+    }
+    .artikel-grid {
+        gap: 18px;
+    }
+    .artikel-card__image {
+        height: 200px;
+    }
+    .artikel-card__body {
+        padding: 18px 18px 20px;
+    }
+    .artikel-card__title {
+        font-size: 18px;
+    }
+}
+
+/* ---------- Tablet portrait: sidebar pindah ke atas ---------- */
+@media (max-width: 900px) {
+
+    .artikel-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .page-banner {
+        padding: 44px 20px 52px;
+    }
+    .page-banner__title {
+        font-size: 34px;
+    }
+
+    .artikel-section {
+        padding: 36px 20px 56px;
+    }
+
+    .artikel-card__title {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* ---------- HP besar ---------- */
+@media (max-width: 768px) {
+
+    .page-banner__title {
+        font-size: 30px;
+    }
+}
+
+/* ---------- HP: artikel 1 kolom ---------- */
+@media (max-width: 640px) {
+
+    .artikel-grid {
+        grid-template-columns: 1fr;
+    }
+    .artikel-card__image {
+        height: 210px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-banner {
+        padding: 32px 16px 40px;
+    }
+    .page-banner__title {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    .breadcrumb {
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .artikel-section {
+        padding: 28px 16px 44px;
+    }
+
+    .search-card {
+        padding: 18px;
+        border-radius: var(--radius-md);
+    }
+    .search-card__title {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .artikel-grid {
+        gap: 16px;
+    }
+    .artikel-card__image {
+        height: 180px;
+    }
+    .artikel-card__body {
+        padding: 16px 16px 18px;
+    }
+    .artikel-card__title {
+        font-size: 17px;
+        margin: 8px 0;
+    }
+    .artikel-card__divider {
+        margin: 14px 0 10px;
+    }
+
+    .pagination {
+        gap: 4px;
+        margin-top: 28px;
+    }
+    .pagination__btn {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+    .pagination__dots {
+        padding: 0;
+    }
+}

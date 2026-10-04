@@ -197,3 +197,154 @@
     font-size: 14.5px;
     color: var(--color-text);
 }
+
+/* =====================================================================
+   RESPONSIVE - HALAMAN PROFIL
+   Breakpoint: 1024px (tablet landscape), 900px (tablet), 768px, 640px, 480px (HP)
+   ===================================================================== */
+
+/* ---------- Tablet landscape ---------- */
+@media (max-width: 1024px) {
+
+    /* Kartu menumpuk: Tentang Sekolah, lalu Visi, lalu Misi */
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .vision-mission-block {
+        height: auto;
+    }
+    .about-card {
+        padding: 28px;
+    }
+    .about-card__image {
+        height: 300px;
+    }
+    .vision-card,
+    .mission-card {
+        padding: 26px;
+    }
+
+    .facilities-grid {
+        gap: 16px;
+    }
+    .facility-card {
+        padding: 26px 12px;
+    }
+}
+
+/* ---------- Tablet portrait: fasilitas 3 per baris ---------- */
+@media (max-width: 900px) {
+
+    /* Fasilitas: flex agar baris terakhir otomatis rata tengah */
+    .facilities-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+    .facility-card {
+        flex: 0 0 calc((100% - 32px) / 3);
+    }
+}
+
+/* ---------- Tablet portrait kecil & HP besar ---------- */
+@media (max-width: 768px) {
+
+    .profile-section {
+        margin-top: -20px;
+        padding: 0 20px 48px;
+    }
+
+    .about-card__title,
+    .vision-card__title,
+    .mission-card__title {
+        font-size: 19px;
+    }
+    .about-card__image {
+        height: 240px;
+    }
+
+    .facilities-section {
+        padding: 48px 20px 56px;
+    }
+    .facilities-section__title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+/* ---------- HP: fasilitas 2 per baris ---------- */
+@media (max-width: 640px) {
+
+    .facility-card {
+        flex: 0 0 calc((100% - 16px) / 2);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .profile-section {
+        margin-top: -16px;
+        padding: 0 16px 40px;
+    }
+    .profile-grid {
+        gap: 18px;
+    }
+
+    .about-card {
+        padding: 22px 18px;
+        border-radius: var(--radius-md);
+    }
+    .about-card__text {
+        font-size: 14px;
+    }
+    .about-card__image {
+        height: 190px;
+    }
+
+    .vision-mission-block {
+        gap: 18px;
+    }
+    .vision-card {
+        padding: 22px 18px;
+        border-radius: var(--radius-md);
+    }
+    .vision-card__text {
+        font-size: 14px;
+    }
+    .mission-card {
+        padding: 22px 18px;
+        border-radius: var(--radius-md);
+    }
+    .mission-card__list {
+        gap: 12px;
+    }
+    .mission-card__list li {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .facilities-section {
+        padding: 40px 16px 48px;
+    }
+    .facilities-section__title {
+        font-size: 22px;
+        margin-bottom: 26px;
+    }
+    .facilities-grid {
+        gap: 12px;
+    }
+    .facility-card {
+        flex: 0 0 calc((100% - 12px) / 2);
+        padding: 22px 10px;
+        gap: 12px;
+    }
+    .facility-card__icon {
+        width: 50px;
+        height: 50px;
+    }
+    .facility-card__label {
+        font-size: 14px;
+    }
+}

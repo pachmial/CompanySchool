@@ -303,3 +303,175 @@
     color: var(--color-text-muted);
     line-height: 1.5;
 }
+
+/* =====================================================================
+   RESPONSIVE - HALAMAN KONTAK
+   Breakpoint: 1024px (tablet landscape), 900px (tablet), 640px, 480px (HP)
+   ===================================================================== */
+
+/* Cegah teks panjang (email, alamat) keluar dari kartu */
+.info-item__body {
+    min-width: 0;
+}
+.info-item__text {
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Tablet landscape: kolom lebih rapat ---------- */
+@media (max-width: 1024px) {
+
+    .kontak-grid {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+    .kontak-left {
+        gap: 20px;
+    }
+    .info-card,
+    .jam-card {
+        padding: 26px;
+    }
+    .form-card {
+        padding: 28px;
+    }
+}
+
+/* ---------- Tablet portrait: 1 kolom, kartu info & jam berdampingan ---------- */
+@media (max-width: 900px) {
+
+    .page-banner {
+        padding: 44px 20px 52px;
+    }
+    .page-banner__title {
+        font-size: 34px;
+    }
+
+    .kontak-section {
+        padding: 36px 20px 56px;
+    }
+
+    .kontak-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kontak-left {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .kontak-map__frame {
+        height: 340px;
+    }
+}
+
+/* ---------- HP: semua menumpuk ---------- */
+@media (max-width: 640px) {
+
+    .kontak-left {
+        grid-template-columns: 1fr;
+    }
+
+    /* Form: Nama & Email jadi 1 kolom */
+    .kontak-form__row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* Badge peta tidak lagi melayang menutupi peta, tapi jadi header di atasnya */
+    .kontak-map__badge {
+        position: static;
+        max-width: none;
+        border-radius: 0;
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--color-border);
+    }
+    .kontak-map__frame {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-banner {
+        padding: 32px 16px 40px;
+    }
+    .page-banner__title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .breadcrumb {
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .kontak-section {
+        padding: 28px 16px 44px;
+    }
+    .kontak-grid {
+        gap: 18px;
+        margin-bottom: 18px;
+    }
+    .kontak-left {
+        gap: 18px;
+    }
+
+    .info-card,
+    .jam-card {
+        padding: 22px 18px;
+        border-radius: var(--radius-md);
+    }
+    .info-card__title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .info-item {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+    .info-item__icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .jam-card__title {
+        font-size: 17px;
+    }
+    .jam-item {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .form-card {
+        padding: 22px 18px;
+        border-radius: var(--radius-md);
+    }
+    .form-card__title {
+        font-size: 20px;
+    }
+    .form-card__subtitle {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+    .kontak-form__group {
+        margin-bottom: 16px;
+    }
+    /* font 16px mencegah browser iPhone melakukan zoom otomatis saat input diketuk */
+    .kontak-form__input,
+    .kontak-form__textarea {
+        font-size: 16px;
+    }
+    .kontak-form__submit {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+
+    .kontak-map {
+        border-radius: var(--radius-md);
+    }
+    .kontak-map__frame {
+        height: 260px;
+    }
+}

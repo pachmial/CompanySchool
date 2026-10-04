@@ -21,7 +21,14 @@
                 <span class="navbar__title">SMKN 4 KOTA BOGOR</span>
             </a>
 
-            <nav class="navbar__menu">
+            <button type="button" class="navbar__toggle" data-navbar-toggle
+                    aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navbar-menu">
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+                <span class="navbar__toggle-bar"></span>
+            </button>
+
+            <nav class="navbar__menu" id="navbar-menu">
 
                 <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'is-active' : '' }}">Home</a>
                 <a href="{{ route('profil') }}" class="{{ request()->routeIs('profil') ? 'is-active' : '' }}">Profil</a>
@@ -29,9 +36,7 @@
                 <a href="{{ route('galeri') }}" class="{{ request()->routeIs('galeri') ? 'is-active' : '' }}">Galeri</a>
                 <a href="{{ route('produk.index') }}" class="{{ request()->routeIs('produk.*') ? 'is-active' : '' }}">Produk</a>
                 <a href="{{ route('kontak') }}" class="{{ request()->routeIs('kontak') ? 'is-active' : '' }}">Kontak</a>
-            </nav>
-
-            
+            </nav>            
         </div>
     </header>
 
